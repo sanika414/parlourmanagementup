@@ -1,0 +1,298 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.auth-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80')
+    center / cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.auth-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   HEADER
+========================= */
+.auth-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.auth-header h2 {
+  font-size: 32px;
+  color: #8b4513;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-group {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 2px solid #e1e5eb;
+  background: #f8f9fa;
+  font-size: 15px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #555;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8b4513;
+  background: #ffffff;
+}
+
+/* =========================
+   PASSWORD INPUT WRAPPER
+========================= */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding: 15px 50px 15px 18px; /* Right padding for eye icon */
+  border-radius: 12px;
+  border: 2px solid #e1e5eb;
+  background: #f8f9fa;
+  font-size: 15px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.password-input-wrapper input:focus {
+  outline: none;
+  border-color: #8b4513;
+  background: #ffffff;
+}
+
+.password-input-wrapper input::placeholder {
+  color: #555;
+}
+
+/* =========================
+   PASSWORD TOGGLE BUTTON (FIXED POSITION)
+========================= */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8b4513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.password-toggle:hover {
+  color: #d2691e;
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.auth-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #8b4513, #d2691e);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #d2691e, #8b4513);
+}
+
+.auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+.error-message {
+  background-color: #fdecea;
+  color: #000000;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #f5c2c7;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.error-message span {
+  color: #000000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.auth-footer {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.auth-footer p {
+  color: #000000;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.auth-footer a {
+  color: #8b4513;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+  color: #d2691e;
+  text-decoration: underline;
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 2px solid #e1e5eb;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.back-home:hover {
+  border-color: #8b4513;
+  color: #8b4513;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 35px 25px;
+  }
+
+  .auth-header h2 {
+    font-size: 26px;
+  }
+
+  .auth-header p {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .password-input-wrapper input {
+    padding: 12px 45px 12px 15px;
+  }
+
+  .password-toggle {
+    right: 12px;
+    font-size: 14px;
+  }
+
+  .auth-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
